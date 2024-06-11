@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+nav {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.login-button {
+  background-color: rgb(46, 46, 245);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.4s background-color;
+}
+
+.login-button:hover {
+  background-color: rgb(58, 58, 221);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.nav-link {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50% !important;
+    background-color: blue;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px !important;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+  }
+
+  .nav-link:hover::before,
+  .nav-link:active::before {
+    width: 100% !important;
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offcanvas {
+    margin-top: 20px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .login-button {
+    margin-right: 20px;
+  }
+}
+
+.main-container {
+  height: 9000px;
+  width: 100%;
+  background-color: aquamarine;
+}
