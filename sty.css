@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+body {
+  background-color: aquamarine;
+}
+
+a {
+  text-decoration: none;
+}
+
 .navbar {
   margin: 20px;
   border-radius: 10px;
@@ -15,11 +23,10 @@ nav {
 }
 
 .login-button {
-  background-color: rgb(46, 46, 245);
-  border-radius: 5px;
+  background-color: rgb(5, 102, 237);
+  border-radius: 10px;
   padding: 5px;
   font-size: 20px;
-  text-decoration: none;
   color: white;
   transition: 0.4s background-color;
 }
@@ -48,16 +55,18 @@ nav {
     position: absolute;
     bottom: 0;
     left: 50% !important;
-    background-color: blue;
+    background-color: rgb(110, 81, 239);
     transform: translateX(-50%);
     width: 0%;
     height: 2px !important;
+    border-radius: 1px;
     transition: 0.3s ease-in-out;
     visibility: hidden;
   }
 
   .nav-link:hover::before,
-  .nav-link:active::before {
+  .nav-link:active::before,
+  .nav-link:focus::before {
     width: 100% !important;
     visibility: visible;
   }
@@ -75,7 +84,35 @@ nav {
 }
 
 .main-container {
-  height: 9000px;
+  height: 900px;
   width: 100%;
-  background-color: aquamarine;
+}
+
+.footerforredus {
+  border-radius: 20px 20px 0 0;
+}
+
+.footer-links {
+  position: relative;
+}
+
+.footer-links::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50% !important;
+  border-radius: 2px;
+  background-color: rgb(95, 65, 230);
+  transform: translateX(-50%);
+  width: 0%;
+  height: 4px !important;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+}
+
+.footer-links:hover::before,
+.footer-links:active::before,
+.footer-links:focus::before {
+  width: 100%;
+  visibility: visible;
 }
